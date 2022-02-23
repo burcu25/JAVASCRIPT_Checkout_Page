@@ -37,12 +37,12 @@ function productsFunction() {
     let subTotal = document.getElementById("cart-subtotal");
     let tax = document.getElementById("cart-tax");
     let shipping =document.getElementById("cart-shipping");
-    let productLines = document.querySelectorAll(".product-line-price");
     let total = document.getElementById("cart-total");
     
     function allTotals() {
         let toplam = 0;
-    
+        let productLines = document.querySelectorAll(".product-line-price");
+        
         productLines.forEach(prototal=>{
             toplam += +prototal.innerText;
             subTotal.children[1].innerText= toplam.toFixed(2);
